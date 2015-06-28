@@ -14,28 +14,24 @@
 
 
 /*
-    This method should return a positive int (cannot be 0)
+    This method should return a positive NSInteger (cannot be 0)
  */
 - (void)shouldReturnAPositiveInt {
-    // your code
 }
 
 /*
-    This method should return negative float (cannot be 0)
+    This method should return negative CGFloat (cannot be 0)
  */
 - (void)shouldReturnANegativeFloat {
-    // your code
 }
 
 /*
     This method should return a negative boolean
  */
 - (void)shouldReturnANegativeBool {
-    // your code
 }
 
 - (void)shouldReturnACharAtoZ {
-    // your code
 }
 
 /*
@@ -52,7 +48,6 @@
  */
 
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber {
-    // your code
     return 0;
 }
 
@@ -86,7 +81,6 @@
     This method should change the person name to "Ada Lovelace"
  */
 - (void)changePersonsNameToAdaLovelace:(Person *)person {
-    
 }
 
 @end

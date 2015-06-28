@@ -51,7 +51,9 @@
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_FLOAT] || [rt isEqualToString:RT_CGFLOAT];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeFloat] && [self.tvc shouldReturnANegativeFloat] < 0;
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeFloat] < 0;
+    NSLog(@"%f", [self.tvc shouldReturnANegativeFloat]);
+    NSLog(@"%d, %d", isCorrectReturnType, isCorrectReturnValue);
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
@@ -103,7 +105,8 @@
 - (void)testIsMultipleOf5 {
     XCTAssertEqual([self.tvc isMultipleOfFive:10], YES);
     XCTAssertEqual([self.tvc isMultipleOfFive:2015], YES);
-    XCTAssertEqual([self.tvc isOdd:88], NO);
+    XCTAssertEqual([self.tvc isMultipleOfFive:215], YES);
+    XCTAssertEqual([self.tvc isMultipleOfFive:1111], NO);
 }
 
 - (void)testShouldReturnPersonsName {
