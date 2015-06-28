@@ -50,4 +50,16 @@
     
 }
 
+- (Person *)createAndReturnPersonWithSomeProperties {
+    return [Person new];
+}
+
+- (void)makePersonSitInChair:(Chair *)chair {
+
+}
+
+- (void)makePersonStandUp:(Person *)person {
+    
+}
+
 @end

@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+@class Chair;
+
 @interface Person : NSObject
 
 - (void)setName:(NSString *)name;
 - (NSString *)name;
+
+- (void)setAge:(NSInteger)age;
+- (NSInteger)age;
+
+// sets up association between a person and a chair
+- (void)sitInChair:(Chair *)chair;
+
+// removes association between a person and a chair
+- (void)standUp;
 
 @end

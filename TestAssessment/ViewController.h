@@ -21,6 +21,9 @@
 - (BOOL)isMultipleOfFive:(NSInteger)number;
 - (NSString *)shouldReturnPersonsName:(Person *)person;
 - (void)changePersonsNameToAdaLovelace:(Person *)person;
+- (Person *)createAndReturnPersonWithSomeProperties;
+- (void)makePersonSitInChair:(Chair *)chair;
+- (void)makePersonStandUp:(Person *)person;
 
 @end
 

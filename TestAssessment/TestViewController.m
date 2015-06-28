@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "Person.h"
+#import "Chair.h"
 
 
 @implementation TestViewController
@@ -81,6 +82,31 @@
     This method should change the person name to "Ada Lovelace"
  */
 - (void)changePersonsNameToAdaLovelace:(Person *)person {
+}
+
+/*
+    This method should do the following:
+    1) Create an instance of Person
+    2) Set the person's name to "Santa Clause"
+    3) Set the person's age to 1823
+ */
+- (Person *)createAndReturnPersonWithSomeProperties {
+    return [Person new];
+}
+
+/*
+    This method provides you an instance of Chair as a parameter
+    1) Create an instance of Person
+    2) Tell the person to sit in the chair
+ */
+
+- (void)makePersonSitInChair:(Chair *)chair {
+}
+
+/*
+    Ask the person to stand up our of their chair
+ */
+- (void)makePersonStandUp:(Person *)person {
 }
 
 @end

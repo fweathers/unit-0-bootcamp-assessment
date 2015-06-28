@@ -11,6 +11,7 @@
 #import "TestViewController.h"
 #import <objc/message.h>
 #import "Person.h"
+#import "Chair.h"
 
 #define RT_INT @"i"
 #define RT_NSINT @"q"
@@ -120,6 +121,26 @@
     [person setName:@"Carl"];
     [self.tvc changePersonsNameToAdaLovelace:person];
     XCTAssert([[person name] isEqualToString:@"Ada Lovelace"]);
+}
+
+- (void)testCreateAndReturnPersonWithSomeProperties {
+    Person *p = [self.tvc createAndReturnPersonWithSomeProperties];
+    XCTAssert([[p name] isEqualToString:@"Santa Clause"]);
+    XCTAssert([p age] == 1823);
+}
+
+- (void)testSitPersonInChair {
+    Chair *chair = [[Chair alloc] init];
+    [self.tvc makePersonSitInChair:chair];
+    XCTAssertTrue([chair isOccupied]);
+}
+
+- (void)testPersonStandUp {
+    Chair *chair = [[Chair alloc] init];
+    Person *person = [[Person alloc] init];
+    [person sitInChair:chair];
+    [self.tvc makePersonStandUp:person];
+    XCTAssertFalse([chair isOccupied]);
 }
 
 
