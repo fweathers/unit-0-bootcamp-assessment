@@ -39,31 +39,31 @@
 }
 
 - (void)testShouldReturnAPositiveInt {
-    Method method = [self aMethodForSelector:@selector(shouldReturnAPositiveInt)];
+    Method method = [self aMethodForSelector:@selector(shouldReturnAPositiveNSInteger)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_INT] || [rt isEqualToString:RT_NSINT];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnAPositiveInt] > 0;
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnAPositiveNSInteger] > 0;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
 - (void)testShouldReturnANegativeFloat {
-    Method method = [self aMethodForSelector:@selector(shouldReturnANegativeFloat)];
+    Method method = [self aMethodForSelector:@selector(shouldReturnANegativeCGFloat)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_FLOAT] || [rt isEqualToString:RT_CGFLOAT];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeFloat] < 0;
-    NSLog(@"%f", [self.tvc shouldReturnANegativeFloat]);
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeCGFloat] < 0;
+    NSLog(@"%f", [self.tvc shouldReturnANegativeCGFloat]);
     NSLog(@"%d, %d", isCorrectReturnType, isCorrectReturnValue);
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
 - (void)testShouldReturnANegativeBool {
-    Method method = [self aMethodForSelector:@selector(shouldReturnANegativeBool)];
+    Method method = [self aMethodForSelector:@selector(shouldReturnAFalsEyBool)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_BOOL];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeBool] == NO;
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnAFalseyBool] == NO;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 - (void)testShouldReturnACharAtoZ {
@@ -76,12 +76,25 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
+- (void)testShouldReturnSumOfArrayValues {
+    int arr1[] = {4, 3, 2, 6, 8, 5, 6, 34, 2};
+    int arr2[] = {4, 64, 234, 4567, 23, 5, 32, 435, 45, 3};
+    int arr3[] = {56, 34, 23, 45, 56, 8, 89, 56, 34, 1};
+    int sum1= [self.tvc shouldReturnSumOfArrayValues:arr1 withSize:(sizeof(arr1)/sizeof(int))];
+    int sum2= [self.tvc shouldReturnSumOfArrayValues:arr2 withSize:(sizeof(arr2)/sizeof(int))];
+    int sum3= [self.tvc shouldReturnSumOfArrayValues:arr3 withSize:(sizeof(arr3)/sizeof(int))];
+    XCTAssertEqual(sum1, 70);
+    XCTAssertEqual(sum2, 5412);
+    XCTAssertEqual(sum3, 402);
+}
+
 - (void)test0to100ReturnsInt {
     Method method = [self aMethodForSelector:@selector(shouldReturnSumOf0To100)];
     NSString *rt = [self returnTypeForMethod:method];
     
+    NSInteger val = [self.tvc shouldReturnSumOf0To100];
     BOOL isCorrectReturnType = [rt isEqualToString:RT_INT] || [rt isEqualToString:RT_NSINT];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnSumOf0To100] == 4950;
+    BOOL isCorrectReturnValue = val == 4950 || val == 5050;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
@@ -141,6 +154,30 @@
     [person sitInChair:chair];
     [self.tvc makePersonStandUp:person];
     XCTAssertFalse([chair isOccupied]);
+}
+
+- (void)testCreateAndReturnNSArray {
+    id t = [self.tvc createAndReturnNSArray];
+    XCTAssertTrue([t isKindOfClass:[NSArray class]]);
+    NSArray *arr = t;
+    XCTAssertTrue(arr.count == 6);
+    for (id item in arr) {
+        XCTAssertTrue([item isKindOfClass:[NSString class]]);
+    }
+}
+
+- (void)testChangeIdxToPersonsName {
+    Person *p = [[Person alloc] init];
+    [p setName:@"Pudge the Dog"];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"", @"", @"", @"", @"", @"", nil];
+    [self.tvc changeValueOfIndexFourInArray:arr toPersonsName:p];
+    XCTAssert([[arr objectAtIndex:4] isEqualToString:[p name]]);
+}
+
+- (void)testRepeatStringXTimes {
+    XCTAssert([[self.tvc repeatString:@"mike" xNumberOfTimes:10] isEqualToString:@"mikemikemikemikemikemikemikemikemikemike"]);
+    XCTAssert([[self.tvc repeatString:@"bubblegum" xNumberOfTimes:4] isEqualToString:@"bubblegumbubblegumbubblegumbubblegum"]);
+    XCTAssert([[self.tvc repeatString:@"a" xNumberOfTimes:100] isEqualToString:@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]);
 }
 
 

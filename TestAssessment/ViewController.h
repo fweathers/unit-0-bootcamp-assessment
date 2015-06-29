@@ -11,10 +11,11 @@
 
 @interface ViewController : UIViewController
 
-- (NSInteger)shouldReturnAPositiveInt;
-- (CGFloat)shouldReturnANegativeFloat;
-- (BOOL)shouldReturnANegativeBool;
+- (NSInteger)shouldReturnAPositiveNSInteger;
+- (CGFloat)shouldReturnANegativeCGFloat;
+- (BOOL)shouldReturnAFalseyBool;
 - (char)shouldReturnACharAtoZ;
+- (int)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
 - (NSInteger)shouldReturnSumOf0To100;
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isOdd:(NSInteger)number;
@@ -24,6 +25,9 @@
 - (Person *)createAndReturnPersonWithSomeProperties;
 - (void)makePersonSitInChair:(Chair *)chair;
 - (void)makePersonStandUp:(Person *)person;
+- (NSArray *)createAndReturnNSArray;
+- (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person;
+- (NSString *)repeatString:(NSString *)str xNumberOfTimes:(NSInteger)numberOfTimes;
 
 @end
 

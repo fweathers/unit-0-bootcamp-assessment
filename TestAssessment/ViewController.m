@@ -10,16 +10,20 @@
 
 @implementation ViewController
 
-- (CGFloat)shouldReturnAPositiveInt {
+- (NSInteger)shouldReturnAPositiveNSInteger {
     return 0;
 }
 
-- (CGFloat)shouldReturnANegativeFloat {
+- (CGFloat)shouldReturnANegativeCGFloat {
     return 0.0;
 }
 
-- (BOOL)shouldReturnANegativeBool {
+- (BOOL)shouldReturnAFalseyBool {
     return 0.0;
+}
+
+- (int)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize {
+    return 0;
 }
 
 - (NSInteger)shouldReturnSumOf0To100 {
@@ -51,7 +55,7 @@
 }
 
 - (Person *)createAndReturnPersonWithSomeProperties {
-    return [Person new];
+    return [[Person alloc] init];
 }
 
 - (void)makePersonSitInChair:(Chair *)chair {
@@ -60,6 +64,18 @@
 
 - (void)makePersonStandUp:(Person *)person {
     
+}
+
+- (NSArray *)createAndReturnNSArray {
+    return @[];
+}
+
+- (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person {
+    
+}
+
+- (NSString *)repeatString:(NSString *)str xNumberOfTimes:(NSInteger)numberOfTimes {
+    return @"";
 }
 
 @end
