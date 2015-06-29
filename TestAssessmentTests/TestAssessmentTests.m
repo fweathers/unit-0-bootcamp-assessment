@@ -175,9 +175,9 @@
 }
 
 - (void)testRepeatStringXTimes {
-    XCTAssert([[self.tvc repeatString:@"mike" xNumberOfTimes:10] isEqualToString:@"mikemikemikemikemikemikemikemikemikemike"]);
-    XCTAssert([[self.tvc repeatString:@"bubblegum" xNumberOfTimes:4] isEqualToString:@"bubblegumbubblegumbubblegumbubblegum"]);
-    XCTAssert([[self.tvc repeatString:@"a" xNumberOfTimes:100] isEqualToString:@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]);
+    XCTAssert([[self.tvc repeatString:@"mike" numberOfTimes:10] isEqualToString:@"mikemikemikemikemikemikemikemikemikemike"]);
+    XCTAssert([[self.tvc repeatString:@"bubblegum" numberOfTimes:4] isEqualToString:@"bubblegumbubblegumbubblegumbubblegum"]);
+    XCTAssert([[self.tvc repeatString:@"a" numberOfTimes:100] isEqualToString:@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]);
 }
 
 

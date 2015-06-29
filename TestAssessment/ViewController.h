@@ -27,7 +27,7 @@
 - (void)makePersonStandUp:(Person *)person;
 - (NSArray *)createAndReturnNSArray;
 - (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person;
-- (NSString *)repeatString:(NSString *)str xNumberOfTimes:(NSInteger)numberOfTimes;
+- (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)numberOfTimes;
 
 @end
 

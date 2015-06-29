@@ -74,7 +74,7 @@
     
 }
 
-- (NSString *)repeatString:(NSString *)str xNumberOfTimes:(NSInteger)numberOfTimes {
+- (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)numberOfTimes {
     return @"";
 }
 

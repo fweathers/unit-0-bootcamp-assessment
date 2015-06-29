@@ -153,7 +153,7 @@
     https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableString_Class/
  */
 
-- (NSString *)repeatString:(NSString *)str xNumberOfTimes:(NSInteger)numberOfTimes {
+- (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)x {
     return @"";
 }
 
