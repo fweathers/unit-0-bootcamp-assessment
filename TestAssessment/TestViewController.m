@@ -47,6 +47,10 @@
     return 0;
 }
 
+// while loop
+// !
+
+
 /*
     This method should return the sum of all numbers from 
     0 - 99 using a loop (eg. 1 + 2 + 3 + ... + 98 + 99)
@@ -80,6 +84,15 @@
 - (BOOL)isMultipleOfFive:(NSInteger)aNumber {
     return NO;
 }
+
+/*
+    This method should return YES is aNumber is odd and bNumber is even
+ */
+
+- (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber {
+    return NO;
+}
+
 
 // char array
 

@@ -20,6 +20,7 @@
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isOdd:(NSInteger)number;
 - (BOOL)isMultipleOfFive:(NSInteger)number;
+- (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber;
 - (NSString *)shouldReturnPersonsName:(Person *)person;
 - (void)changePersonsNameToAdaLovelace:(Person *)person;
 - (Person *)createAndReturnPersonWithSomeProperties;

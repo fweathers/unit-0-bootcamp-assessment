@@ -123,6 +123,15 @@
     XCTAssertEqual([self.tvc isMultipleOfFive:1111], NO);
 }
 
+- (void)testIsOddAndEven {
+    XCTAssertTrue([self.tvc returnYesIfThisNumberIsOdd:5 andThisNumberIsEven:10]);
+    XCTAssertTrue([self.tvc returnYesIfThisNumberIsOdd:8321 andThisNumberIsEven:1238]);
+    XCTAssertFalse([self.tvc returnYesIfThisNumberIsOdd:4444 andThisNumberIsEven:92]);
+    XCTAssertFalse([self.tvc returnYesIfThisNumberIsOdd:4444 andThisNumberIsEven:92]);
+    XCTAssertFalse([self.tvc returnYesIfThisNumberIsOdd:4444 andThisNumberIsEven:93]);
+    XCTAssertTrue([self.tvc returnYesIfThisNumberIsOdd:1 andThisNumberIsEven:2]);
+}
+
 - (void)testShouldReturnPersonsName {
     Person *person = [[Person alloc] init];
     [person setName:@"Carl"];

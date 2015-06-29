@@ -46,6 +46,10 @@
     return NO;
 }
 
+- (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber {
+    return NO;
+}
+
 - (NSString *)shouldReturnPersonsName:(Person *)person {
     return @"";
 }
