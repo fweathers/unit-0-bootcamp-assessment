@@ -7,3 +7,6 @@
 ###Submission
 You're going to submit your assessment the same way we've been submitting weekly homework, by forking the repo and submitting a pull request. If you need a refresher, you can find a step-by-step at the following link:
 https://github.com/accesscode-2-2/how-to-pr
+
+###Grading
+This assessment is pass/fail. 14/16 correct answers are required to pass, not including bonus questions.
