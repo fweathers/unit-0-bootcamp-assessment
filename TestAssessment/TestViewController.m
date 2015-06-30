@@ -177,6 +177,11 @@
 
 // BONUS
 /*
+    Given an array of numbers, sum each number in the array UNTIL
+    the sum is greater than 1050. The returned value of this method
+    should never be greater than 1050.
+    (ex: [500, 500, 500] returns 1000)
+    (ex: [200, 500, 100, 400] returns 800)
  */
 - (int)returnSumWhileSumIsLessThan1050:(int *)arr {
     return 0;
