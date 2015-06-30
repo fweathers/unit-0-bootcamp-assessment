@@ -15,15 +15,19 @@
 
 
 /*
-    This method should return a positive NSInteger (cannot be 0)
+    This method should return any positive NSInteger 
+    (hint: cannot be 0)
  */
 - (void)shouldReturnAPositiveNSInteger {
+    
 }
 
 /*
-    This method should return negative CGFloat (cannot be 0)
+    This method should return any negative CGFloat 
+    (hint: cannot be 0)
  */
 - (void)shouldReturnANegativeCGFloat {
+    
 }
 
 /*
@@ -31,6 +35,7 @@
     Falsey: Something which evaluates to FALSE.
  */
 - (void)shouldReturnAFalseyBool {
+    
 }
 
 /*
@@ -40,30 +45,34 @@
 }
 
 /*
-    Given a c array (int[]) and a count, return the sum of the numbers within the arr
-    (eg. arr[0] + arr[1] ...)
- */
-- (int)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)count {
-    return 0;
-}
-
-// while loop
-// !
-
-
-/*
     This method should return the sum of all numbers from 
-    0 - 99 using a loop (eg. 1 + 2 + 3 + ... + 98 + 99)
+    0 - 99 using a loop (. 1 + 2 + 3 + ... + 98 + 99)
  */
-
 - (NSInteger)shouldReturnSumOf0To100 {
     return 0;
 }
 
 /*
-    This method should return the sum of aNumber and bNumber
+    Given a c array (int[]) and a count, return the sum of the numbers within the arr
+    (eg. arr[0] + arr[1] ...)
  */
+- (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)count {
+    return 0;
+}
 
+/*
+    Provided a C string (array of chars), return the character
+    that immediately preceeds the letter q
+    (ex. "aionkljajvqlkjaml" would return the letter 'v')
+    (hint: while loop)
+ */
+- (char)shouldReturnCharBeforeQ:(char *)str {
+    return '\0';
+}
+
+/*
+    This method should return the sum of aNumber + bNumber
+ */
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber {
     return 0;
 }
@@ -72,7 +81,6 @@
 /*
     This method should return a YES if aNumber is odd
  */
-
 - (BOOL)isOdd:(NSInteger)aNumber {
     return NO;
 }
@@ -80,7 +88,6 @@
 /*
     This method should return YES if aNumber is a multiple of 5
  */
-
 - (BOOL)isMultipleOfFive:(NSInteger)aNumber {
     return NO;
 }
@@ -88,19 +95,15 @@
 /*
     This method should return YES is aNumber is odd and bNumber is even
  */
-
-- (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber {
+- (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber
+               andThisNumberIsEven:(NSInteger)bNumber {
     return NO;
 }
-
-
-// char array
 
 /*
     This method should return the name property of the person
     parameter (hint: command + click on class name to jump to the interface.
  */
-
 - (NSString *)shouldReturnPersonsName:(Person *)person {
     return @"";
 }
@@ -125,25 +128,26 @@
 /*
     This method provides you an instance of Chair as a parameter
     1) Create an instance of Person
-    2) Tell the person to sit in the chair
+    2) Tell the person to sit in the chair 
+    (hint: take a look at the methods on the Person class)
+ 
  */
-
 - (void)makePersonSitInChair:(Chair *)chair {
     
 }
 
 /*
-    Ask the person to stand up our of their chair
+    This method provides you an instance of Person as a parameter
+    Send a message to this Person object telling it to stand up
  */
 - (void)makePersonStandUp:(Person *)person {
     
 }
 
-
-/* 
+/*
     Create and return an NSArray containing 6 NSString objects
+    https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/
  */
-
 - (NSArray *)createAndReturnNSArray {
     return [[NSArray alloc] init];
 }
@@ -154,8 +158,8 @@
     as a parameter
     https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/
  */
-
-- (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person {
+- (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr
+                        toPersonsName:(Person *)person {
     
 }
 
@@ -166,8 +170,16 @@
     https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableString_Class/
  */
 
-- (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)x {
+- (NSString *)repeatString:(NSString *)str
+             numberOfTimes:(NSInteger)x {
     return @"";
+}
+
+// BONUS
+/*
+ */
+- (int)returnSumWhileSumIsLessThan1050:(int *)arr {
+    return 0;
 }
 
 @end

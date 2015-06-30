@@ -22,7 +22,7 @@
     return 0.0;
 }
 
-- (int)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize {
+- (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize {
     return 0;
 }
 
@@ -32,6 +32,14 @@
 
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber {
     return 0;
+}
+
+- (int)returnSumWhileSumIsLessThan1050:(int *)arr {
+    return 0;
+}
+
+- (char)shouldReturnCharBeforeQ:(char *)str {
+   return '\0';
 }
 
 - (char)shouldReturnACharAtoZ {

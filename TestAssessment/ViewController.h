@@ -15,8 +15,9 @@
 - (CGFloat)shouldReturnANegativeCGFloat;
 - (BOOL)shouldReturnAFalseyBool;
 - (char)shouldReturnACharAtoZ;
-- (int)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
+- (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
 - (NSInteger)shouldReturnSumOf0To100;
+- (char)shouldReturnCharBeforeQ:(char *)str;
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isOdd:(NSInteger)number;
 - (BOOL)isMultipleOfFive:(NSInteger)number;
@@ -29,6 +30,7 @@
 - (NSArray *)createAndReturnNSArray;
 - (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person;
 - (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)numberOfTimes;
+- (int)returnSumWhileSumIsLessThan1050:(int *)arr;
 
 @end
 

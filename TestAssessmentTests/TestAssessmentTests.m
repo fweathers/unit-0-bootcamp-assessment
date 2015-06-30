@@ -59,7 +59,7 @@
 }
 
 - (void)testShouldReturnANegativeBool {
-    Method method = [self aMethodForSelector:@selector(shouldReturnAFalsEyBool)];
+    Method method = [self aMethodForSelector:@selector(shouldReturnAFalseyBool)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_BOOL];
@@ -76,18 +76,6 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
-- (void)testShouldReturnSumOfArrayValues {
-    int arr1[] = {4, 3, 2, 6, 8, 5, 6, 34, 2};
-    int arr2[] = {4, 64, 234, 4567, 23, 5, 32, 435, 45, 3};
-    int arr3[] = {56, 34, 23, 45, 56, 8, 89, 56, 34, 1};
-    int sum1= [self.tvc shouldReturnSumOfArrayValues:arr1 withSize:(sizeof(arr1)/sizeof(int))];
-    int sum2= [self.tvc shouldReturnSumOfArrayValues:arr2 withSize:(sizeof(arr2)/sizeof(int))];
-    int sum3= [self.tvc shouldReturnSumOfArrayValues:arr3 withSize:(sizeof(arr3)/sizeof(int))];
-    XCTAssertEqual(sum1, 70);
-    XCTAssertEqual(sum2, 5412);
-    XCTAssertEqual(sum3, 402);
-}
-
 - (void)test0to100ReturnsInt {
     Method method = [self aMethodForSelector:@selector(shouldReturnSumOf0To100)];
     NSString *rt = [self returnTypeForMethod:method];
@@ -96,6 +84,30 @@
     BOOL isCorrectReturnType = [rt isEqualToString:RT_INT] || [rt isEqualToString:RT_NSINT];
     BOOL isCorrectReturnValue = val == 4950 || val == 5050;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
+}
+
+- (void)testShouldReturnSumOfArrayValues {
+    int arr1[] = {4, 3, 2, 6, 8, 5, 6, 34, 2};
+    int arr2[] = {4, 64, 234, 4567, 23, 5, 32, 435, 45, 3};
+    int arr3[] = {56, 34, 23, 45, 56, 8, 89, 56, 34, 1};
+    NSInteger sum1= [self.tvc shouldReturnSumOfArrayValues:arr1 withSize:(sizeof(arr1)/sizeof(int))];
+    NSInteger sum2= [self.tvc shouldReturnSumOfArrayValues:arr2 withSize:(sizeof(arr2)/sizeof(int))];
+    NSInteger sum3= [self.tvc shouldReturnSumOfArrayValues:arr3 withSize:(sizeof(arr3)/sizeof(int))];
+    XCTAssertEqual(sum1, 70);
+    XCTAssertEqual(sum2, 5412);
+    XCTAssertEqual(sum3, 402);
+}
+
+- (void)testReturnCharBeforeQ {
+    char str1[] = "mciaehflkqjkadflkj";
+    char str2[] = "poirjbml;kmadfqkjadj;";
+    char str3[] = "gijorklmzqadoijzlxkcm";
+    char c1= [self.tvc shouldReturnCharBeforeQ:str1];
+    char c2= [self.tvc shouldReturnCharBeforeQ:str2];
+    char c3= [self.tvc shouldReturnCharBeforeQ:str3];
+    XCTAssertTrue(c1 == 'k');
+    XCTAssertTrue(c2 == 'f');
+    XCTAssertTrue(c3 == 'z');
 }
 
 - (void)testSumOfTwoIntegers {
@@ -189,6 +201,10 @@
     XCTAssert([[self.tvc repeatString:@"a" numberOfTimes:100] isEqualToString:@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]);
 }
 
+- (void)testReturnUpTo1050 {
+    int arr1[] = {4, 1, 5, 42, 54, 3, 23, 542, 13, 12, 43, 5, 2, 1, 426, 735};
+    XCTAssertTrue([self.tvc returnSumWhileSumIsLessThan1050:arr1] == 750);
+}
 
 // private helpers
 
