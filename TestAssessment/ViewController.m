@@ -44,7 +44,7 @@
    return '\0';
 }
 
-- (char)shouldReturnACharAtoZ {
+- (char)ShouldReturnAChar0to9 {
     return 0;
 }
 

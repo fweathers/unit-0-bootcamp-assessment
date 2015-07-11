@@ -17,8 +17,9 @@
 - (CGFloat)shouldReturnAPositiveCGFloat;
 //Changed Falsey to Positive
 - (BOOL)shouldReturnAPositiveBool;
-//Ch
-- (char)shouldReturnACharAtoZ;
+//Changed A to Z to 0 to 9
+- (char)ShouldReturnAChar0to9;
+
 - (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
 - (NSInteger)shouldReturnSumOf0To100;
 - (char)shouldReturnCharBeforeQ:(char *)str;

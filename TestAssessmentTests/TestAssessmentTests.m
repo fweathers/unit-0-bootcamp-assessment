@@ -73,13 +73,13 @@
 }
 
 //
-- (void)testShouldReturnACharAtoZ {
-    Method method = [self aMethodForSelector:@selector(shouldReturnACharAtoZ)];
+- (void)testShouldReturnAChar0to9 {
+    Method method = [self aMethodForSelector:@selector(ShouldReturnAChar0to9)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_CHAR];
-    char c = [self.tvc shouldReturnACharAtoZ];
-    BOOL isCorrectReturnValue = (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+    char c = [self.tvc ShouldReturnAChar0to9];
+    BOOL isCorrectReturnValue = (c >= '0' && c <= '9');
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 

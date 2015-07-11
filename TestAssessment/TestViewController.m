@@ -46,8 +46,8 @@
 /*
     This method should return a single char from a - z
  */
-- (char)shouldReturnACharAtoZ {
-    return 'c';
+- (char)ShouldReturnAChar0to9 {
+    return '0';
 }
 
 /*
