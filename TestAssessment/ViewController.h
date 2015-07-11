@@ -21,7 +21,8 @@
 - (char)ShouldReturnAChar0to9;
 
 - (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
-- (NSInteger)shouldReturnSumOf0To100;
+//Changed 100 to 1000
+- (NSInteger)shouldReturnSumOf0To1000;
 - (char)shouldReturnCharBeforeQ:(char *)str;
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isOdd:(NSInteger)number;

@@ -28,7 +28,7 @@
     return 0;
 }
 
-- (NSInteger)shouldReturnSumOf0To100 {
+- (NSInteger)shouldReturnSumOf0To1000 {
     return 0.0;
 }
 

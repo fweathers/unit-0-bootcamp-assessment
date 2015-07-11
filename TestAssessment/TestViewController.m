@@ -54,9 +54,9 @@
     This method should return the sum of all numbers from 
     0 - 99 using a loop (. 1 + 2 + 3 + ... + 98 + 99)
  */
-- (NSInteger)shouldReturnSumOf0To100 {
+- (NSInteger)shouldReturnSumOf0To1000 {
     NSInteger sum = 0;
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 1000; i++) {
         NSLog(@"%d", i);
         sum = sum + i;
     }

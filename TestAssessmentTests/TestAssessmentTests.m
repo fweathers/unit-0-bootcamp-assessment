@@ -72,7 +72,7 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
-//
+//Changed A to Z to 0 to 9
 - (void)testShouldReturnAChar0to9 {
     Method method = [self aMethodForSelector:@selector(ShouldReturnAChar0to9)];
     NSString *rt = [self returnTypeForMethod:method];
@@ -83,13 +83,14 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
-- (void)test0to100ReturnsInt {
-    Method method = [self aMethodForSelector:@selector(shouldReturnSumOf0To100)];
+//Changed 100 to 1000
+- (void)test0to1000ReturnsInt {
+    Method method = [self aMethodForSelector:@selector(shouldReturnSumOf0To1000)];
     NSString *rt = [self returnTypeForMethod:method];
     
-    NSInteger val = [self.tvc shouldReturnSumOf0To100];
+    NSInteger val = [self.tvc shouldReturnSumOf0To1000];
     BOOL isCorrectReturnType = [rt isEqualToString:RT_INT] || [rt isEqualToString:RT_NSINT];
-    BOOL isCorrectReturnValue = val == 4950 || val == 5050;
+    BOOL isCorrectReturnValue = val == 499500 || val == 500500;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
