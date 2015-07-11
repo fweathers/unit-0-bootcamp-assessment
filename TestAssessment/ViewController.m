@@ -40,7 +40,7 @@
     return 0;
 }
 
-- (char)shouldReturnCharBeforeQ:(char *)str {
+- (char)shouldReturnCharAfterQ:(char *)str {
    return '\0';
 }
 

@@ -85,20 +85,12 @@
     (ex. "aionkljajvqlkjaml" would return the letter 'v')
     (hint: while loop)
  */
-- (char)shouldReturnCharBeforeQ:(char *)str {
-    
-//    int i = 0;
-//    
-//    while (str[i] != 'q') {
-//        i++;
-//    }
-//    
-//    return str[i - 1];
+- (char)shouldReturnCharAfterQ:(char *)str {
     
     for (int i = 0; i < strlen(str); i++) {
         printf("%c", str[i]);
         if (str[i] == 'q') {
-            return str[i - 1];
+            return str[i + 1];
         }
     }
     

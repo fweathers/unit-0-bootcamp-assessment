@@ -23,7 +23,7 @@
 - (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
 //Changed 100 to 1000
 - (NSInteger)shouldReturnSumOf0To1000;
-- (char)shouldReturnCharBeforeQ:(char *)str;
+- (char)shouldReturnCharAfterQ:(char *)str;
 - (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isOdd:(NSInteger)number;
 - (BOOL)isMultipleOfFive:(NSInteger)number;

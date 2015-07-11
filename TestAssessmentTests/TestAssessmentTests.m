@@ -106,16 +106,17 @@
     XCTAssertEqual(sum3, 402);
 }
 
-- (void)testReturnCharBeforeQ {
+//Changed Before to After
+- (void)testReturnAfterQ {
     char str1[] = "mciaehflkqjkadflkj";
     char str2[] = "poirjbml;kmadfqkjadj;";
     char str3[] = "gijorklmzqadoijzlxkcm";
-    char c1= [self.tvc shouldReturnCharBeforeQ:str1];
-    char c2= [self.tvc shouldReturnCharBeforeQ:str2];
-    char c3= [self.tvc shouldReturnCharBeforeQ:str3];
-    XCTAssertTrue(c1 == 'k');
-    XCTAssertTrue(c2 == 'f');
-    XCTAssertTrue(c3 == 'z');
+    char c1= [self.tvc shouldReturnCharAfterQ:str1];
+    char c2= [self.tvc shouldReturnCharAfterQ:str2];
+    char c3= [self.tvc shouldReturnCharAfterQ:str3];
+    XCTAssertTrue(c1 == 'j');
+    XCTAssertTrue(c2 == 'k');
+    XCTAssertTrue(c3 == 'a');
 }
 
 - (void)testSumOfTwoIntegers {
