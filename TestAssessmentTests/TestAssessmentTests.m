@@ -12,8 +12,7 @@
 #import <XCTest/XCTest.h>
 #import "TestViewController.h"
 #import <objc/message.h>
-#import "Person.h"
-#import "Chair.h"
+#import "Car.h"
 
 #define RT_INT @"i"
 #define RT_NSINT @"q"
@@ -73,13 +72,13 @@
 }
 
 //Changed A to Z to 0 to 9
-- (void)testShouldReturnAChar0to9 {
-    Method method = [self aMethodForSelector:@selector(ShouldReturnAChar0to9)];
+- (void)testShouldReturnACharCtoL {
+    Method method = [self aMethodForSelector:@selector(shouldReturnACharCtoL)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_CHAR];
-    char c = [self.tvc ShouldReturnAChar0to9];
-    BOOL isCorrectReturnValue = (c >= '0' && c <= '9');
+    char c = [self.tvc shouldReturnACharCtoL];
+    BOOL isCorrectReturnValue = (c >= 'c' && c <= 'l') || (c >= 'C' && c <= 'L');
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
@@ -109,12 +108,12 @@
 
 //Changed Before to After
 - (void)testReturnAfterQ {
-    char str1[] = "mciaehflkqjkadflkj";
-    char str2[] = "poirjbml;kmadfqkjadj;";
-    char str3[] = "gijorklmzqadoijzlxkcm";
-    char c1= [self.tvc shouldReturnCharAfterQ:str1];
-    char c2= [self.tvc shouldReturnCharAfterQ:str2];
-    char c3= [self.tvc shouldReturnCharAfterQ:str3];
+    char str1[] = "mciaehflkgjkadflkj";
+    char str2[] = "poirjbml;kmadfgkjadj;";
+    char str3[] = "gijorklmzgadoijzlxkcm";
+    char c1= [self.tvc shouldReturnCharAfterG:str1];
+    char c2= [self.tvc shouldReturnCharAfterG:str2];
+    char c3= [self.tvc shouldReturnCharAfterG:str3];
     XCTAssertTrue(c1 == 'j');
     XCTAssertTrue(c2 == 'k');
     XCTAssertTrue(c3 == 'a');
@@ -151,66 +150,36 @@
     XCTAssertTrue([self.tvc returnYesIfThisNumberIsOdd:1 andThisNumberIsEven:2]);
 }
 
-- (void)testShouldReturnPersonsName {
-    Person *person = [[Person alloc] init];
-    [person setName:@"Carl"];
-    XCTAssertEqual([self.tvc shouldReturnPersonsName:person], person.name);
+- (void)testShouldReturnCarModel {
+    Car *car = [Car new];
+    [car setModel:@"Honda Pilot"];
+    XCTAssert([[self.tvc shouldReturnCarModel:car] isEqualToString:@"Honda Pilot"]);
 }
 
-- (void)testChangePersonsNameToAdaLovelace {
-    Person *person = [[Person alloc] init];
-    [person setName:@"Carl"];
-    [self.tvc changePersonsNameToAdaLovelace:person];
-    XCTAssert([[person name] isEqualToString:@"Ada Lovelace"]);
+- (void)testShouldChangeCarModel {
+    Car *car = [Car new];
+    [car setModel:@"Honda Pilot"];
+    [self.tvc changeCarModelToFirebird:car];
+    XCTAssert([[car model] isEqualToString:@"Firebird"]);
 }
 
-- (void)testCreateAndReturnPersonWithSomeProperties {
-    Person *p = [self.tvc createAndReturnPersonWithSomeProperties];
-    XCTAssert([[p name] isEqualToString:@"Santa Clause"]);
-    XCTAssert([p age] == 1823);
+
+- (void)testDriveCarAndReturnFuel {
+    Car *car = [Car new];
+    [self.tvc tellCarToDrive4MilesAndReturnFuelLevel:car];
+    XCTAssertTrue([car fuelLevel] == 60.0);
 }
 
-- (void)testSitPersonInChair {
-    Chair *chair = [[Chair alloc] init];
-    [self.tvc makePersonSitInChair:chair];
-    XCTAssertTrue([chair isOccupied]);
+- (void)testReturnSumOver100 {
+    int arr1[] = {132, 155, 2, 3, 13, 5, 57, 687, 2};
+    int count = sizeof(arr1) / sizeof(int);
+    XCTAssertTrue([self.tvc returnSumOfAllItemsGreaterThan100:arr1 withSize:count] == 974);
 }
 
-- (void)testPersonStandUp {
-    Chair *chair = [[Chair alloc] init];
-    Person *person = [[Person alloc] init];
-    [person sitInChair:chair];
-    [self.tvc makePersonStandUp:person];
-    XCTAssertFalse([chair isOccupied]);
-}
-
-- (void)testCreateAndReturnNSArray {
-    id t = [self.tvc createAndReturnNSArray];
-    XCTAssertTrue([t isKindOfClass:[NSArray class]]);
-    NSArray *arr = t;
-    XCTAssertTrue(arr.count == 6);
-    for (id item in arr) {
-        XCTAssertTrue([item isKindOfClass:[NSString class]]);
-    }
-}
-
-- (void)testChangeIdxToPersonsName {
-    Person *p = [[Person alloc] init];
-    [p setName:@"Pudge the Dog"];
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"", @"", @"", @"", @"", @"", nil];
-    [self.tvc changeValueOfIndexFourInArray:arr toPersonsName:p];
-    XCTAssert([[arr objectAtIndex:4] isEqualToString:[p name]]);
-}
-
-- (void)testRepeatStringXTimes {
-    XCTAssert([[self.tvc repeatString:@"mike" numberOfTimes:10] isEqualToString:@"mikemikemikemikemikemikemikemikemikemike"]);
-    XCTAssert([[self.tvc repeatString:@"bubblegum" numberOfTimes:4] isEqualToString:@"bubblegumbubblegumbubblegumbubblegum"]);
-    XCTAssert([[self.tvc repeatString:@"a" numberOfTimes:100] isEqualToString:@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]);
-}
-
-- (void)testReturnUpTo1050 {
-    int arr1[] = {4, 1, 5, 42, 54, 3, 23, 542, 13, 12, 43, 5, 2, 1, 426, 735};
-    XCTAssertTrue([self.tvc returnSumWhileSumIsLessThan1050:arr1] == 750);
+- (void)testCreateAndReturnNewCar {
+    Car *c = [self.tvc createAndReturnANewCar];
+    XCTAssertTrue([c fuelLevel] == 40.0);
+    XCTAssert([[c model] isEqualToString:@"Honda Pilot"]);
 }
 
 // private helpers

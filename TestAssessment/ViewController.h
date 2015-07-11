@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Person.h"
+#import "Car.h"
 
 @interface ViewController : UIViewController
 
@@ -18,25 +18,20 @@
 //Changed Falsey to Positive
 - (BOOL)shouldReturnAPositiveBool;
 //Changed A to Z to 0 to 9
-- (char)ShouldReturnAChar0to9;
-
+- (char)shouldReturnACharCtoL;
 - (NSInteger)shouldReturnAverageOfArrayValues :(int *)arr withSize:(int)arrSize;
 //Changed 100 to 1000
 - (NSInteger)shouldReturnSumOf0To1000;
-- (char)shouldReturnCharAfterQ:(char *)str;
+- (char)shouldReturnCharAfterG:(char *)str;
 - (NSInteger)productOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isEven:(NSInteger)number;
 - (BOOL)isMultipleOfTen:(NSInteger)number;
 - (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber;
-- (NSString *)shouldReturnPersonsName:(Person *)person;
-- (void)changePersonsNameToAdaLovelace:(Person *)person;
-- (Person *)createAndReturnPersonWithSomeProperties;
-- (void)makePersonSitInChair:(Chair *)chair;
-- (void)makePersonStandUp:(Person *)person;
-- (NSArray *)createAndReturnNSArray;
-- (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person;
-- (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)numberOfTimes;
-- (int)returnSumWhileSumIsLessThan1050:(int *)arr;
+- (int)returnSumOfAllItemsGreaterThan100:(int *)arr withSize:(int)size;
+- (NSString *)shouldReturnCarModel:(Car *)car;
+- (void)changeCarModelToFirebird:(Car *)car;
+- (CGFloat)tellCarToDrive4MilesAndReturnFuelLevel:(Car *)car;
+- (Car *)createAndReturnANewCar;
 
 @end
 

@@ -15,8 +15,7 @@
 		8D160A801B3F1DE80090E590 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D160A7E1B3F1DE80090E590 /* LaunchScreen.xib */; };
 		8D160A8C1B3F1DE80090E590 /* TestAssessmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D160A8B1B3F1DE80090E590 /* TestAssessmentTests.m */; };
 		8D160A971B3F1DF60090E590 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D160A961B3F1DF60090E590 /* TestViewController.m */; };
-		8D7B7B431B3F8DAE008863C9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B7B421B3F8DAE008863C9 /* Person.m */; };
-		8DE268E91B403EB800A1A8EB /* Chair.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE268E81B403EB800A1A8EB /* Chair.m */; };
+		8DC86B6A1B51A269003981A2 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC86B691B51A269003981A2 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +44,8 @@
 		8D160A8B1B3F1DE80090E590 /* TestAssessmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAssessmentTests.m; sourceTree = "<group>"; };
 		8D160A951B3F1DF60090E590 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		8D160A961B3F1DF60090E590 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		8D7B7B411B3F8DAE008863C9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		8D7B7B421B3F8DAE008863C9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		8DE268E71B403EB800A1A8EB /* Chair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chair.h; sourceTree = "<group>"; };
-		8DE268E81B403EB800A1A8EB /* Chair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chair.m; sourceTree = "<group>"; };
+		8DC86B681B51A269003981A2 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		8DC86B691B51A269003981A2 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +89,6 @@
 			children = (
 				8D7B7B441B3F9358008863C9 /* Files */,
 				8D160A961B3F1DF60090E590 /* TestViewController.m */,
-				8DE268E71B403EB800A1A8EB /* Chair.h */,
-				8D7B7B411B3F8DAE008863C9 /* Person.h */,
 				8D160A791B3F1DE80090E590 /* Main.storyboard */,
 				8D160A7C1B3F1DE80090E590 /* Images.xcassets */,
 				8D160A7E1B3F1DE80090E590 /* LaunchScreen.xib */,
@@ -131,13 +126,13 @@
 		8D7B7B441B3F9358008863C9 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				8DE268E81B403EB800A1A8EB /* Chair.m */,
-				8D7B7B421B3F8DAE008863C9 /* Person.m */,
 				8D160A731B3F1DE80090E590 /* AppDelegate.h */,
 				8D160A741B3F1DE80090E590 /* AppDelegate.m */,
 				8D160A761B3F1DE80090E590 /* ViewController.h */,
 				8D160A771B3F1DE80090E590 /* ViewController.m */,
 				8D160A951B3F1DF60090E590 /* TestViewController.h */,
+				8DC86B681B51A269003981A2 /* Car.h */,
+				8DC86B691B51A269003981A2 /* Car.m */,
 			);
 			name = Files;
 			sourceTree = "<group>";
@@ -242,10 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC86B6A1B51A269003981A2 /* Car.m in Sources */,
 				8D160A781B3F1DE80090E590 /* ViewController.m in Sources */,
 				8D160A751B3F1DE80090E590 /* AppDelegate.m in Sources */,
-				8D7B7B431B3F8DAE008863C9 /* Person.m in Sources */,
-				8DE268E91B403EB800A1A8EB /* Chair.m in Sources */,
 				8D160A971B3F1DF60090E590 /* TestViewController.m in Sources */,
 				8D160A721B3F1DE80090E590 /* main.m in Sources */,
 			);

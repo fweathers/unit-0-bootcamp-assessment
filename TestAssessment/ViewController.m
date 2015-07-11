@@ -36,16 +36,16 @@
     return 0;
 }
 
-- (int)returnSumWhileSumIsLessThan1050:(int *)arr {
+- (int)returnSumOfAllItemsGreaterThan100:(int *)arr withSize:(int)size {
     return 0;
 }
 
-- (char)shouldReturnCharAfterQ:(char *)str {
+- (char)shouldReturnCharAfterG:(char *)str {
    return '\0';
 }
 
-- (char)ShouldReturnAChar0to9 {
-    return 0;
+- (char)shouldReturnACharCtoL {
+    return 'a';
 }
 
 - (BOOL)isEven:(NSInteger)number {
@@ -60,36 +60,20 @@
     return NO;
 }
 
-- (NSString *)shouldReturnPersonsName:(Person *)person {
+- (NSString *)shouldReturnCarModel:(Car *)car {
     return @"";
 }
 
-- (void)changePersonsNameToAdaLovelace:(Person *)person {
+- (void)changeCarModelToFirebird:(Car *)car {
     
 }
 
-- (Person *)createAndReturnPersonWithSomeProperties {
-    return [[Person alloc] init];
+- (CGFloat)tellCarToDrive4MilesAndReturnFuelLevel:(Car *)car {
+    return 0.0;
 }
 
-- (void)makePersonSitInChair:(Chair *)chair {
-
-}
-
-- (void)makePersonStandUp:(Person *)person {
-    
-}
-
-- (NSArray *)createAndReturnNSArray {
-    return @[];
-}
-
-- (void)changeValueOfIndexFourInArray:(NSMutableArray *)arr toPersonsName:(Person *)person {
-    
-}
-
-- (NSString *)repeatString:(NSString *)str numberOfTimes:(NSInteger)numberOfTimes {
-    return @"";
+- (Car *)createAndReturnANewCar {
+    return [Car new];
 }
 
 @end
