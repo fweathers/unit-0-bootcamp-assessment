@@ -48,7 +48,7 @@
     return 0;
 }
 
-- (BOOL)isOdd:(NSInteger)number {
+- (BOOL)isEven:(NSInteger)number {
     return NO;
 }
 

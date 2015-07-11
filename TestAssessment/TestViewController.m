@@ -108,10 +108,10 @@
 
 
 /*
-    This method should return a YES if aNumber is odd
+    This method should return a YES if aNumber is Even
  */
-- (BOOL)isOdd:(NSInteger)aNumber {
-    if (aNumber % 2 != 0) {
+- (BOOL)isEven:(NSInteger)aNumber {
+    if (aNumber % 2 == 0) {
         return YES;
     } else {
         return NO;
