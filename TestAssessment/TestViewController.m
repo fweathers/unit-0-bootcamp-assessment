@@ -31,8 +31,8 @@
     This method should return any negative CGFloat 
     (hint: cannot be 0)
  */
-- (CGFloat)shouldReturnANegativeCGFloat {
-    return -8.0;
+- (CGFloat)shouldReturnAPositiveCGFloat {
+    return 8.0;
 }
 
 /*

@@ -50,16 +50,18 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
-- (void)testShouldReturnANegativeFloat {
-    Method method = [self aMethodForSelector:@selector(shouldReturnANegativeCGFloat)];
+//Changed from Negative to Positive
+- (void)testShouldReturnAPositiveFloat {
+    Method method = [self aMethodForSelector:@selector(shouldReturnAPositiveCGFloat)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_FLOAT] || [rt isEqualToString:RT_CGFLOAT];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeCGFloat] < 0;
-    NSLog(@"%f", [self.tvc shouldReturnANegativeCGFloat]);
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnAPositiveCGFloat] > 0;
+    NSLog(@"%f", [self.tvc shouldReturnAPositiveCGFloat]);
     NSLog(@"%d, %d", isCorrectReturnType, isCorrectReturnValue);
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
+
 
 - (void)testShouldReturnANegativeBool {
     Method method = [self aMethodForSelector:@selector(shouldReturnAFalseyBool)];

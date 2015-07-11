@@ -16,7 +16,7 @@
     return 0;
 }
 
-- (CGFloat)shouldReturnANegativeCGFloat {
+- (CGFloat)shouldReturnAPositiveCGFloat {
     return 0.0;
 }
 
