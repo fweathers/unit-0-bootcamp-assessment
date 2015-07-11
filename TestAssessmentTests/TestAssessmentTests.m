@@ -94,6 +94,7 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
+//Changed Sum to Average
 - (void)testShouldReturnAverageOfArrayValues {
     int arr1[] = {40, 30, 20, 60, 80, 50, 60, 340, 10, 30};
     int arr2[] = {4, 64, 234, 4567, 23, 5, 32, 435, 45, 11};
@@ -119,12 +120,13 @@
     XCTAssertTrue(c3 == 'a');
 }
 
-- (void)testSumOfTwoIntegers {
-    Method method = [self aMethodForSelector:@selector(sumOfAnInteger:andAnotherInteger:)];
+//Changed Sum to Product
+- (void)testProductOfTwoIntegers {
+    Method method = [self aMethodForSelector:@selector(productOfAnInteger:andAnotherInteger:)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_INT] || [rt isEqualToString:RT_NSINT];
-    BOOL isCorrectReturnValue = [self.tvc sumOfAnInteger:12 andAnotherInteger:16] == 28;
+    BOOL isCorrectReturnValue = [self.tvc productOfAnInteger:12 andAnotherInteger:10] == 120;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 

@@ -32,7 +32,7 @@
     return 0.0;
 }
 
-- (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber {
+- (NSInteger)productOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber {
     return 0;
 }
 

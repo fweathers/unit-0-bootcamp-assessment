@@ -101,9 +101,9 @@
 /*
     This method should return the sum of aNumber + bNumber
  */
-- (NSInteger)sumOfAnInteger:(NSInteger)aNumber
+- (NSInteger)productOfAnInteger:(NSInteger)aNumber
           andAnotherInteger:(NSInteger)bNumber {
-    return aNumber + bNumber;
+    return aNumber * bNumber;
 }
 
 

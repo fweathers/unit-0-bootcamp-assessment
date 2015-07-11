@@ -24,7 +24,7 @@
 //Changed 100 to 1000
 - (NSInteger)shouldReturnSumOf0To1000;
 - (char)shouldReturnCharAfterQ:(char *)str;
-- (NSInteger)sumOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
+- (NSInteger)productOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isOdd:(NSInteger)number;
 - (BOOL)isMultipleOfFive:(NSInteger)number;
 - (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber;
