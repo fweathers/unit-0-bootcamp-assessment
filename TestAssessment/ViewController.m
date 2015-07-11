@@ -52,7 +52,7 @@
     return NO;
 }
 
-- (BOOL)isMultipleOfFive:(NSInteger)number {
+- (BOOL)isMultipleOfTen:(NSInteger)number {
     return NO;
 }
 

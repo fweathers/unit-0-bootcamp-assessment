@@ -122,10 +122,10 @@
 }
 
 /*
-    This method should return YES if aNumber is a multiple of 5
+    This method should return YES if aNumber is a multiple of 10
  */
-- (BOOL)isMultipleOfFive:(NSInteger)aNumber {
-    return aNumber % 5 == 0;
+- (BOOL)isMultipleOfTen:(NSInteger)aNumber {
+    return aNumber % 10 == 0;
 }
 
 /*

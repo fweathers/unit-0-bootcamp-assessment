@@ -130,16 +130,16 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
+//Changed Odd to Even
 - (void)testIsEven {
     XCTAssertEqual([self.tvc isEven:7], NO);
     XCTAssertEqual([self.tvc isEven:88], YES);
 }
 
-- (void)testIsMultipleOf5 {
-    XCTAssertEqual([self.tvc isMultipleOfFive:10], YES);
-    XCTAssertEqual([self.tvc isMultipleOfFive:2015], YES);
-    XCTAssertEqual([self.tvc isMultipleOfFive:215], YES);
-    XCTAssertEqual([self.tvc isMultipleOfFive:1111], NO);
+//Changed 5 to 10
+- (void)testIsMultipleOf10 {
+    XCTAssertEqual([self.tvc isMultipleOfTen:10], YES);
+    XCTAssertEqual([self.tvc isMultipleOfTen:2015], NO);
 }
 
 - (void)testIsOddAndEven {

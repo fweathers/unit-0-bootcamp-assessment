@@ -26,7 +26,7 @@
 - (char)shouldReturnCharAfterQ:(char *)str;
 - (NSInteger)productOfAnInteger:(NSInteger)aNumber andAnotherInteger:(NSInteger)bNumber;
 - (BOOL)isEven:(NSInteger)number;
-- (BOOL)isMultipleOfFive:(NSInteger)number;
+- (BOOL)isMultipleOfTen:(NSInteger)number;
 - (BOOL)returnYesIfThisNumberIsOdd:(NSInteger)aNumber andThisNumberIsEven:(NSInteger)bNumber;
 - (NSString *)shouldReturnPersonsName:(Person *)person;
 - (void)changePersonsNameToAdaLovelace:(Person *)person;
