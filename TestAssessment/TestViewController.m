@@ -110,7 +110,7 @@
     (hint: command + click on the class name to see what methods are available)
  */
 - (NSString *)shouldReturnCarModel:(Car *)car {
-    return [car model];
+    return @"";
 }
 
 /*
