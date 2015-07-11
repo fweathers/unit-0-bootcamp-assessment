@@ -94,16 +94,16 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
-- (void)testShouldReturnSumOfArrayValues {
-    int arr1[] = {4, 3, 2, 6, 8, 5, 6, 34, 2};
-    int arr2[] = {4, 64, 234, 4567, 23, 5, 32, 435, 45, 3};
-    int arr3[] = {56, 34, 23, 45, 56, 8, 89, 56, 34, 1};
-    NSInteger sum1= [self.tvc shouldReturnSumOfArrayValues:arr1 withSize:(sizeof(arr1)/sizeof(int))];
-    NSInteger sum2= [self.tvc shouldReturnSumOfArrayValues:arr2 withSize:(sizeof(arr2)/sizeof(int))];
-    NSInteger sum3= [self.tvc shouldReturnSumOfArrayValues:arr3 withSize:(sizeof(arr3)/sizeof(int))];
-    XCTAssertEqual(sum1, 70);
-    XCTAssertEqual(sum2, 5412);
-    XCTAssertEqual(sum3, 402);
+- (void)testShouldReturnAverageOfArrayValues {
+    int arr1[] = {40, 30, 20, 60, 80, 50, 60, 340, 10, 30};
+    int arr2[] = {4, 64, 234, 4567, 23, 5, 32, 435, 45, 11};
+    int arr3[] = {56, 34, 23, 45, 56, 8, 89, 56, 34, 9};
+    NSInteger avg1= [self.tvc shouldReturnAverageOfArrayValues :arr1 withSize:(sizeof(arr1)/sizeof(int))];
+    NSInteger avg2= [self.tvc shouldReturnAverageOfArrayValues :arr2 withSize:(sizeof(arr2)/sizeof(int))];
+    NSInteger avg3= [self.tvc shouldReturnAverageOfArrayValues :arr3 withSize:(sizeof(arr3)/sizeof(int))];
+    XCTAssertEqual(avg1, 72);
+    XCTAssertEqual(avg2, 542);
+    XCTAssertEqual(avg3, 41);
 }
 
 //Changed Before to After

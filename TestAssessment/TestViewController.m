@@ -68,15 +68,16 @@
     Given a c array (int[]) and a count, return the sum of the numbers within the arr
     (eg. arr[0] + arr[1] ...)
  */
-- (NSInteger)shouldReturnSumOfArrayValues:(int *)arr
+- (NSInteger)shouldReturnAverageOfArrayValues :(int *)arr
                                  withSize:(int)count {
     NSInteger sum = 0;
+
     
     for (int i = 0; i < count; i++) {
         sum = sum + arr[i];
     }
     
-    return sum;
+    return sum/count;
 }
 
 /*

@@ -20,7 +20,7 @@
 //Changed A to Z to 0 to 9
 - (char)ShouldReturnAChar0to9;
 
-- (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
+- (NSInteger)shouldReturnAverageOfArrayValues :(int *)arr withSize:(int)arrSize;
 //Changed 100 to 1000
 - (NSInteger)shouldReturnSumOf0To1000;
 - (char)shouldReturnCharAfterQ:(char *)str;

@@ -24,7 +24,7 @@
     return 0.0;
 }
 
-- (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize {
+- (NSInteger)shouldReturnAverageOfArrayValues :(int *)arr withSize:(int)arrSize {
     return 0;
 }
 
