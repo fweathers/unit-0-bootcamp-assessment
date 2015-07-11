@@ -15,8 +15,9 @@
 - (NSInteger)shouldReturnANegativeNSInteger;
 //Changed Negative to Positive
 - (CGFloat)shouldReturnAPositiveCGFloat;
-
-- (BOOL)shouldReturnAFalseyBool;
+//Changed Falsey to Positive
+- (BOOL)shouldReturnAPositiveBool;
+//Ch
 - (char)shouldReturnACharAtoZ;
 - (NSInteger)shouldReturnSumOfArrayValues:(int *)arr withSize:(int)arrSize;
 - (NSInteger)shouldReturnSumOf0To100;

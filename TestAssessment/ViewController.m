@@ -20,7 +20,7 @@
     return 0.0;
 }
 
-- (BOOL)shouldReturnAFalseyBool {
+- (BOOL)shouldReturnAPositiveBool {
     return 0.0;
 }
 

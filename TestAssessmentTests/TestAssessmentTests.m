@@ -62,15 +62,17 @@
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 
-
-- (void)testShouldReturnANegativeBool {
-    Method method = [self aMethodForSelector:@selector(shouldReturnAFalseyBool)];
+//Changed Negative to Positive
+- (void)testShouldReturnAPositiveBool {
+    Method method = [self aMethodForSelector:@selector(shouldReturnAPositiveBool)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_BOOL];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnAFalseyBool] == NO;
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnAPositiveBool] == YES;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
+
+//
 - (void)testShouldReturnACharAtoZ {
     Method method = [self aMethodForSelector:@selector(shouldReturnACharAtoZ)];
     NSString *rt = [self returnTypeForMethod:method];

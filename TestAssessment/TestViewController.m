@@ -39,8 +39,8 @@
     This method should return a falsy boolean
     Falsey: Something which evaluates to FALSE.
  */
-- (BOOL)shouldReturnAFalseyBool {
-    return NO;
+- (BOOL)shouldReturnAPositiveBool {
+    return YES;
 }
 
 /*
