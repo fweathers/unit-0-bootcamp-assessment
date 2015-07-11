@@ -6,11 +6,13 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
+//Updated by Franklin on 7/11/2015
+
 #import "ViewController.h"
 
 @implementation ViewController
 
-- (NSInteger)shouldReturnAPositiveNSInteger {
+- (NSInteger)shouldReturnANegativeNSInteger {
     return 0;
 }
 

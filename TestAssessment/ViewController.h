@@ -11,7 +11,8 @@
 
 @interface ViewController : UIViewController
 
-- (NSInteger)shouldReturnAPositiveNSInteger;
+//Changed Positive to Negative
+- (NSInteger)shouldReturnANegativeNSInteger;
 - (CGFloat)shouldReturnANegativeCGFloat;
 - (BOOL)shouldReturnAFalseyBool;
 - (char)shouldReturnACharAtoZ;

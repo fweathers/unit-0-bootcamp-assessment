@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
+//Updated by Franklin on 7/11/15
+
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "TestViewController.h"
@@ -38,12 +40,13 @@
     [super tearDown];
 }
 
-- (void)testShouldReturnAPositiveInt {
-    Method method = [self aMethodForSelector:@selector(shouldReturnAPositiveNSInteger)];
+//Changed from Positive to Negative
+- (void)testShouldReturnANegativeInt {
+    Method method = [self aMethodForSelector:@selector(shouldReturnANegativeNSInteger)];
     NSString *rt = [self returnTypeForMethod:method];
     
     BOOL isCorrectReturnType = [rt isEqualToString:RT_INT] || [rt isEqualToString:RT_NSINT];
-    BOOL isCorrectReturnValue = [self.tvc shouldReturnAPositiveNSInteger] > 0;
+    BOOL isCorrectReturnValue = [self.tvc shouldReturnANegativeNSInteger] < 0;
     XCTAssert(isCorrectReturnType && isCorrectReturnValue);
 }
 

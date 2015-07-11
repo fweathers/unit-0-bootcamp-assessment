@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
+// Updated by Franklin on 7/11/2015
+
 #import "TestViewController.h"
 #import "Person.h"
 #import "Chair.h"
@@ -13,16 +15,16 @@
 
 @implementation TestViewController
 
-
+//Changed positive to negative
 /*
     This method should return any positive NSInteger 
     (hint: cannot be 0)
  */
-- (NSInteger)shouldReturnAPositiveNSInteger {
+- (NSInteger)shouldReturnANegativeNSInteger {
 //    NSInteger ourPositiveInteger = 2;
 //    return ourPositiveInteger;
     
-    return 10;
+    return -1;
 }
 
 /*
