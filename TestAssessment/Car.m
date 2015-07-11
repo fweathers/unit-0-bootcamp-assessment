@@ -30,6 +30,9 @@
 }
 
 - (NSString *)model {
+    if (_model == nil) {
+        _model = @"mike";
+    }
     return _model;
 }
 
