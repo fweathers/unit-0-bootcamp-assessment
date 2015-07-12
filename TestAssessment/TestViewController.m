@@ -16,7 +16,7 @@
 
 //Changed positive to negative
 /*
-    This method should return any positive NSInteger 
+    This method should return any negative NSInteger
     (hint: cannot be 0)
  */
 - (void)shouldReturnANegativeNSInteger {
@@ -24,7 +24,7 @@
 }
 
 /*
-    This method should return any negative CGFloat 
+    This method should return any positive CGFloat
     (hint: cannot be 0)
  */
 - (void)shouldReturnAPositiveCGFloat {
@@ -32,23 +32,23 @@
 }
 
 /*
-    This method should return a falsy boolean
-    Falsey: Something which evaluates to FALSE.
+    This method should return a truthy boolean
+    Truthy: Something which evaluates to TRUE.
  */
 - (void)shouldReturnAPositiveBool {
     
 }
 
 /*
-    This method should return a single char from c - l
+    This method should return any single char from c - l
  */
 - (void)shouldReturnACharCtoL {
     
 }
 
 /*
-    This method should return the sum of all numbers from 
-    0 - 1000 using a loop (. 1 + 2 + 3 + ... + 998 + 999)
+    This method should return the product of all numbers from
+    0 - 1000 using a loop (eg. 1 + 2 + 3 + ... + 998 + 999)
  */
 - (NSInteger)shouldReturnSumOf0To1000 {
     return 0;
@@ -74,11 +74,11 @@
 }
 
 /*
-    This method should return the sum of aNumber + bNumber
+    This method should return the product of aNumber + bNumber
     (hint: product = muliplication
  */
 - (NSInteger)productOfAnInteger:(NSInteger)aNumber
-          andAnotherInteger:(NSInteger)bNumber {
+              andAnotherInteger:(NSInteger)bNumber {
     return 0.0;
 }
 

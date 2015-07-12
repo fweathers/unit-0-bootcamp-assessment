@@ -110,7 +110,7 @@
 - (void)testReturnAfterQ {
     char str1[] = "mciaehflkgjkadflkj";
     char str2[] = "poirjbml;kmadfgkjadj;";
-    char str3[] = "gijorklmzgadoijzlxkcm";
+    char str3[] = "wijorklmzgadoijzlxkcm";
     char c1= [self.tvc shouldReturnCharAfterG:str1];
     char c2= [self.tvc shouldReturnCharAfterG:str2];
     char c3= [self.tvc shouldReturnCharAfterG:str3];
